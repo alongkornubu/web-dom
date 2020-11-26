@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOGO</title>   
+</head>
+<body>
+    <form name="dropmsgform">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <p id="memo">Welcome</p>
+
+    
+       <select name="dropmsgoption" size="1" style="width:300" onChange="expandone()">
+        <option selected>CS</option>
+        <option>IT</option>
+        <option>DSSI</option>
+        <option>BIO</option>
+        <option>CHEM</option>
+        <option>PHY</option>
+       </select>
+       <button type="button" onclick="myFunction()">Blue</button>
+       <button type="button" onclick="Export()">White</button>
+       <button type="button" onclick="good()">Set font size</button>
+       <button type="button" onclick="goods()">Set samll font size</button>
+       <div id="dropmsg0" class="dropcontent">ComputerScience </div>
+       <div id="dropmsg1" class="dropcontent"> Information Technology </div>
+       <div id="dropmsg2" class="dropcontent">Datascience and Information Sofware</div>
+       <div id="dropmsg3" class="dropcontent">Biology</div>
+       <div id="dropmsg4" class="dropcontent">Chemical</div>
+       <div id="dropmsg5" class="dropcontent">Physic</div>
+
+    </form>
+</body>
+
+<script type="text/javascript">
+	if (document.getElementById){
+	   document.write('<style type="text/css">\n')
+	   document.write('.dropcontent{display:none;}\n')
+	   document.write('</style>\n')
+	}
+	function contractall(){
+	   if (document.getElementById){
+	      var inc=0
+	      while (document.getElementById("dropmsg"+inc)){
+		  document.getElementById("dropmsg"+inc).style.display="none"
+		  inc++
+	      }
+	   }
+	}
+
+	function expandone(){
+	   if (document.getElementById){
+	      var selectedItem=document.dropmsgform.dropmsgoption.selectedIndex
+              contractall()
+	      document.getElementById("dropmsg"+selectedItem).style.display="block"
+	   }
+	}
+
+
+	function myFunction() {
+  document.body.style.backgroundColor = "blue";
+}
+
+function Export() {
+  document.body.style.backgroundColor = "white";
+}
+
+function good() {
+  document.getElementById("memo").style.fontSize = "x-large";
+}
+
+function goods() {
+  document.getElementById("memo").style.fontSize = "x-small";
+}
+
+
+
+   </script>
+</html>
