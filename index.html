@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOGO</title>   
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
+<style>
+   body {
+      background-color: powderblue;
+   }
+   .w3-btn {width:150px;}
+</style>
+<body > 
+  
+  
+    <center>
+    <p id="meo">Login</p>
     <form name="dropmsgform">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br><br>
-
-        <p id="memo">Welcome</p>
-
-    
-       <select name="dropmsgoption" size="1" style="width:300" onChange="expandone()">
-        <option selected>CS</option>
-        <option>IT</option>
-        <option>DSSI</option>
-        <option>BIO</option>
-        <option>CHEM</option>
-        <option>PHY</option>
+        <label for="fname"> Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>  
+        
+        
+        <br>
+        <select name="dropmsgoption" size="1" style="width:300" onChange="expandone()">
+             <option selected>CS</option>
+             <option>IT</option>
+             <option>DSSI</option>
+             <option>BIO</option>
+             <option>CHEM</option>
+             <option>PHY</option>
        </select>
-       <button type="button" onclick="myFunction()">Blue</button>
-       <button type="button" onclick="Export()">White</button>
-       <button type="button" onclick="good()">Set font size</button>
-       <button type="button" onclick="goods()">Set samll font size</button>
-       <div id="dropmsg0" class="dropcontent">ComputerScience </div>
-       <div id="dropmsg1" class="dropcontent"> Information Technology </div>
-       <div id="dropmsg2" class="dropcontent">Datascience and Information Sofware</div>
-       <div id="dropmsg3" class="dropcontent">Biology</div>
-       <div id="dropmsg4" class="dropcontent">Chemical</div>
-       <div id="dropmsg5" class="dropcontent">Physic</div>
-
+        <div id="dropmsg0" class="dropcontent">ComputerScience </div>
+        <div id="dropmsg1" class="dropcontent"> Information Technology </div>
+        <div id="dropmsg2" class="dropcontent">Datascience and Information Sofware</div>
+        <div id="dropmsg3" class="dropcontent">Biology</div>
+        <div id="dropmsg4" class="dropcontent">Chemical</div>
+        <div id="dropmsg5" class="dropcontent">Physic</div>
+        <br>
+        <br>
+        <button type="button" onclick="myFunction()">Blue</button>
+        <button type="button" onclick="Export()">White</button>
+        <button type="button" onclick="good()">Italic Bold Font </button>
+        <button type="button" onclick="goods()">Impact Font</button>             
     </form>
+   </center> 
+   <br>
+   <br>
 </body>
-
+<center><iframe src="node.html" style="height:500px;width:500px;" title="Iframe Example"></iframe></center>
 <script type="text/javascript">
 	if (document.getElementById){
 	   document.write('<style type="text/css">\n')
@@ -62,7 +74,7 @@
 	}
 
 
-	function myFunction() {
+function myFunction() {
   document.body.style.backgroundColor = "blue";
 }
 
@@ -71,14 +83,14 @@ function Export() {
 }
 
 function good() {
-  document.getElementById("memo").style.fontSize = "x-large";
+   document.getElementById("meo").style.font = "italic bold 20px arial,serif";
 }
 
 function goods() {
-  document.getElementById("memo").style.fontSize = "x-small";
+  document.getElementById("meo").style.fontFamily  = "Impact,Charcoal,sans-serif ";
 }
+</script>
 
 
-
-   </script>
+   
 </html>
